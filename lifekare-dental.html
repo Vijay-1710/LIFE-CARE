@@ -1,0 +1,2247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Life Kare Dental Hospital — Premium Dental Care, Vanasthalipuram</title>
+<meta name="description" content="Experience world-class dental care in Vanasthalipuram. Dr. Vijay Kumar and team offer implants, cosmetic dentistry, laser treatments & more. Rated 4.9★ by 400+ patients.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:wght@300;400;500&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* =============================================
+     CSS VARIABLES & RESET
+  ============================================= */
+  :root {
+    --ivory:     #F9F6F0;
+    --cream:     #EDE8DC;
+    --gold:      #B8975A;
+    --gold-lt:   #D4B07A;
+    --gold-dk:   #8A6E3C;
+    --navy:      #0D1B2A;
+    --navy-mid:  #162336;
+    --teal:      #2A7C75;
+    --teal-lt:   #3BA89F;
+    --white:     #FFFFFF;
+    --text-body: #3A3530;
+    --text-mid:  #6B6259;
+    --text-lt:   #9B8F84;
+    --ff-head:   'Cormorant Garamond', serif;
+    --ff-sub:    'Playfair Display', serif;
+    --ff-body:   'DM Sans', sans-serif;
+    --ease-out:  cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-in:   cubic-bezier(0.7, 0, 0.84, 0);
+    --shadow-sm: 0 2px 12px rgba(13,27,42,0.08);
+    --shadow-md: 0 8px 40px rgba(13,27,42,0.12);
+    --shadow-lg: 0 24px 80px rgba(13,27,42,0.18);
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; font-size: 16px; }
+  body {
+    font-family: var(--ff-body);
+    background: var(--ivory);
+    color: var(--text-body);
+    overflow-x: hidden;
+    line-height: 1.6;
+  }
+  img { display: block; max-width: 100%; }
+  a { text-decoration: none; color: inherit; }
+  button { cursor: pointer; border: none; background: none; font-family: var(--ff-body); }
+
+  /* =============================================
+     UTILITY CLASSES
+  ============================================= */
+  .container { max-width: 1200px; margin: 0 auto; padding: 0 2rem; }
+  .container--wide { max-width: 1400px; margin: 0 auto; padding: 0 2rem; }
+  .tag {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    font-size: 0.7rem; font-weight: 500; letter-spacing: 0.2em;
+    text-transform: uppercase; color: var(--gold);
+    margin-bottom: 1.2rem;
+  }
+  .tag::before {
+    content: ''; display: block;
+    width: 24px; height: 1px; background: var(--gold);
+  }
+  .section-title {
+    font-family: var(--ff-head);
+    font-size: clamp(2.4rem, 4vw, 3.8rem);
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--navy);
+  }
+  .section-title em {
+    font-style: italic;
+    color: var(--teal);
+  }
+  .section-subtitle {
+    font-size: 1rem;
+    color: var(--text-mid);
+    max-width: 520px;
+    line-height: 1.8;
+    margin-top: 1rem;
+  }
+  .btn-primary {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--gold);
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    transition: all 0.3s var(--ease-out);
+    position: relative;
+    overflow: hidden;
+  }
+  .btn-primary::after {
+    content: '';
+    position: absolute; inset: 0;
+    background: var(--gold-dk);
+    transform: translateX(-100%);
+    transition: transform 0.4s var(--ease-out);
+  }
+  .btn-primary:hover::after { transform: translateX(0); }
+  .btn-primary span { position: relative; z-index: 1; }
+  .btn-primary svg { position: relative; z-index: 1; transition: transform 0.3s; }
+  .btn-primary:hover svg { transform: translateX(4px); }
+  .btn-outline {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    transition: all 0.3s var(--ease-out);
+  }
+  .btn-outline:hover {
+    background: var(--gold);
+    color: var(--white);
+  }
+  .divider {
+    width: 60px; height: 1px;
+    background: linear-gradient(90deg, var(--gold), transparent);
+    margin: 1.5rem 0;
+  }
+
+  /* =============================================
+     ANIMATIONS
+  ============================================= */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+  }
+  @keyframes shimmer {
+    from { background-position: -200% center; }
+    to   { background-position: 200% center; }
+  }
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50%       { transform: translateY(-8px); }
+  }
+  @keyframes pulse-ring {
+    0%   { transform: scale(0.8); opacity: 1; }
+    100% { transform: scale(1.6); opacity: 0; }
+  }
+  @keyframes draw-line {
+    from { stroke-dashoffset: 1000; }
+    to   { stroke-dashoffset: 0; }
+  }
+  .reveal {
+    opacity: 0;
+    transform: translateY(28px);
+    transition: opacity 0.8s var(--ease-out), transform 0.8s var(--ease-out);
+  }
+  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal-delay-1 { transition-delay: 0.1s; }
+  .reveal-delay-2 { transition-delay: 0.2s; }
+  .reveal-delay-3 { transition-delay: 0.3s; }
+  .reveal-delay-4 { transition-delay: 0.4s; }
+
+  /* =============================================
+     NAVIGATION
+  ============================================= */
+  #navbar {
+    position: fixed; top: 0; left: 0; right: 0;
+    z-index: 100;
+    padding: 1.5rem 0;
+    transition: all 0.4s var(--ease-out);
+  }
+  #navbar.scrolled {
+    background: rgba(13,27,42,0.95);
+    backdrop-filter: blur(20px);
+    padding: 1rem 0;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+  }
+  .nav-inner {
+    display: flex; align-items: center; justify-content: space-between;
+  }
+  .nav-logo {
+    display: flex; align-items: center; gap: 0.8rem;
+    color: var(--white);
+  }
+  .nav-logo-icon {
+    width: 36px; height: 36px;
+    background: var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .nav-logo-text { line-height: 1; }
+  .nav-logo-name {
+    font-family: var(--ff-head);
+    font-size: 1.15rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+  }
+  .nav-logo-sub {
+    font-size: 0.62rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    margin-top: 1px;
+  }
+  .nav-links {
+    display: flex; align-items: center; gap: 2.2rem;
+    list-style: none;
+  }
+  .nav-links a {
+    color: rgba(255,255,255,0.8);
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+    position: relative;
+  }
+  .nav-links a::after {
+    content: '';
+    position: absolute; bottom: -4px; left: 0; right: 0;
+    height: 1px; background: var(--gold);
+    transform: scaleX(0);
+    transition: transform 0.3s var(--ease-out);
+  }
+  .nav-links a:hover { color: var(--white); }
+  .nav-links a:hover::after { transform: scaleX(1); }
+  .nav-cta {
+    display: flex; align-items: center; gap: 1rem;
+  }
+  .nav-phone {
+    color: var(--gold-lt);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    display: flex; align-items: center; gap: 0.4rem;
+  }
+  .hamburger {
+    display: none;
+    flex-direction: column; gap: 5px;
+    cursor: pointer; padding: 4px;
+  }
+  .hamburger span {
+    width: 24px; height: 1.5px;
+    background: var(--white);
+    transition: all 0.3s;
+  }
+  .mobile-menu {
+    display: none;
+    position: fixed; top: 0; left: 0; right: 0; bottom: 0;
+    background: var(--navy);
+    z-index: 99;
+    flex-direction: column; align-items: center; justify-content: center;
+    gap: 2.5rem;
+  }
+  .mobile-menu.open { display: flex; }
+  .mobile-menu a {
+    color: var(--white);
+    font-family: var(--ff-head);
+    font-size: 2rem;
+    font-weight: 300;
+  }
+  .mobile-close {
+    position: absolute; top: 1.5rem; right: 2rem;
+    font-size: 2rem; color: var(--white); cursor: pointer;
+  }
+
+  /* =============================================
+     HERO
+  ============================================= */
+  #hero {
+    min-height: 100vh;
+    background: var(--navy);
+    position: relative;
+    display: flex; align-items: center;
+    overflow: hidden;
+  }
+  .hero-bg {
+    position: absolute; inset: 0;
+    background:
+      radial-gradient(ellipse 80% 60% at 70% 50%, rgba(42,124,117,0.18) 0%, transparent 60%),
+      radial-gradient(ellipse 60% 80% at 20% 80%, rgba(184,151,90,0.12) 0%, transparent 50%),
+      linear-gradient(135deg, #0D1B2A 0%, #162336 60%, #0D2230 100%);
+  }
+  .hero-grain {
+    position: absolute; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.04'/%3E%3C/svg%3E");
+    opacity: 0.4;
+  }
+  .hero-lines {
+    position: absolute; inset: 0; overflow: hidden; pointer-events: none;
+  }
+  .hero-lines svg { width: 100%; height: 100%; position: absolute; }
+  .hero-content {
+    position: relative; z-index: 2;
+    padding: 10rem 0 6rem;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+  }
+  .hero-left { animation: fadeUp 1s var(--ease-out) 0.2s both; }
+  .hero-badge {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: rgba(184,151,90,0.15);
+    border: 1px solid rgba(184,151,90,0.3);
+    padding: 0.4rem 1rem;
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    margin-bottom: 2rem;
+  }
+  .hero-badge::before {
+    content: '';
+    width: 6px; height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    animation: pulse-ring 1.5s ease-out infinite;
+  }
+  .hero-title {
+    font-family: var(--ff-head);
+    font-size: clamp(3rem, 5.5vw, 5.2rem);
+    font-weight: 300;
+    line-height: 1.08;
+    color: var(--white);
+    margin-bottom: 1.5rem;
+  }
+  .hero-title em {
+    font-style: italic;
+    background: linear-gradient(135deg, var(--gold-lt), var(--teal-lt));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .hero-desc {
+    font-size: 1.05rem;
+    color: rgba(255,255,255,0.6);
+    max-width: 440px;
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+  .hero-actions {
+    display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap;
+  }
+  .hero-stats {
+    display: flex; gap: 2.5rem; margin-top: 3.5rem;
+    padding-top: 2.5rem;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .hero-stat-num {
+    font-family: var(--ff-head);
+    font-size: 2.2rem;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+  .hero-stat-num span { color: var(--gold-lt); }
+  .hero-stat-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+    margin-top: 4px;
+  }
+  .hero-right {
+    position: relative;
+    animation: fadeIn 1.2s var(--ease-out) 0.6s both;
+  }
+  .hero-card-main {
+    background: linear-gradient(135deg, rgba(255,255,255,0.05), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(20px);
+    padding: 2.5rem;
+    position: relative;
+    animation: float 6s ease-in-out infinite;
+  }
+  .hero-card-main::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 2px;
+    background: linear-gradient(90deg, var(--gold), var(--teal));
+  }
+  .hero-smile-icon {
+    width: 80px; height: 80px;
+    background: linear-gradient(135deg, var(--teal), var(--teal-lt));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 2.2rem;
+    margin-bottom: 1.5rem;
+  }
+  .hero-card-title {
+    font-family: var(--ff-head);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--white);
+    margin-bottom: 0.5rem;
+  }
+  .hero-card-desc {
+    font-size: 0.88rem;
+    color: rgba(255,255,255,0.5);
+    line-height: 1.7;
+    margin-bottom: 1.8rem;
+  }
+  .hero-services-list {
+    display: flex; flex-direction: column; gap: 0.7rem;
+  }
+  .hero-service-item {
+    display: flex; align-items: center; gap: 0.8rem;
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.7);
+  }
+  .hero-service-dot {
+    width: 6px; height: 6px; flex-shrink: 0;
+    background: var(--gold);
+    border-radius: 50%;
+  }
+  .hero-rating-card {
+    position: absolute;
+    bottom: -2rem; right: -2rem;
+    background: var(--gold);
+    padding: 1.2rem 1.5rem;
+    animation: float 6s ease-in-out 2s infinite;
+  }
+  .hero-rating-stars {
+    display: flex; gap: 2px; margin-bottom: 4px;
+    font-size: 0.9rem;
+  }
+  .hero-rating-num {
+    font-family: var(--ff-head);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--white);
+    line-height: 1;
+  }
+  .hero-rating-label {
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.75);
+    margin-top: 2px;
+  }
+  .hero-scroll {
+    position: absolute;
+    bottom: 2rem; left: 50%; transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 0.5rem;
+    color: rgba(255,255,255,0.3);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    animation: fadeIn 1s ease 1.5s both;
+  }
+  .scroll-line {
+    width: 1px; height: 40px;
+    background: linear-gradient(var(--gold), transparent);
+    animation: shimmer 2s ease-in-out infinite;
+  }
+
+  /* =============================================
+     TRUST BAR
+  ============================================= */
+  #trust-bar {
+    background: var(--navy-mid);
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding: 1.2rem 0;
+    overflow: hidden;
+  }
+  .trust-track {
+    display: flex; gap: 4rem; align-items: center;
+    animation: marquee 30s linear infinite;
+    white-space: nowrap;
+    width: max-content;
+  }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  .trust-item {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+  }
+  .trust-item svg { color: var(--gold); flex-shrink: 0; }
+
+  /* =============================================
+     ABOUT
+  ============================================= */
+  #about { padding: 8rem 0; background: var(--ivory); }
+  .about-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+  }
+  .about-visual { position: relative; }
+  .about-img-main {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(145deg, var(--cream) 0%, #DDD5C5 100%);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .about-img-placeholder {
+    text-align: center;
+    color: var(--text-mid);
+  }
+  .about-img-placeholder .icon {
+    font-size: 4rem; margin-bottom: 1rem; opacity: 0.4;
+  }
+  .about-img-label {
+    font-size: 0.75rem; letter-spacing: 0.12em;
+    text-transform: uppercase; opacity: 0.5;
+  }
+  .about-accent-card {
+    position: absolute;
+    right: -2rem; bottom: 3rem;
+    background: var(--teal);
+    color: var(--white);
+    padding: 1.5rem 2rem;
+    min-width: 200px;
+    box-shadow: var(--shadow-md);
+  }
+  .about-accent-num {
+    font-family: var(--ff-head);
+    font-size: 2.6rem;
+    font-weight: 300;
+    line-height: 1;
+  }
+  .about-accent-label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    opacity: 0.75;
+    margin-top: 4px;
+  }
+  .about-corner-tag {
+    position: absolute; top: 2rem; left: -1rem;
+    background: var(--navy);
+    color: var(--gold-lt);
+    font-size: 0.65rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    writing-mode: vertical-lr;
+    transform: rotate(180deg);
+  }
+  .about-text { }
+  .about-quote {
+    font-family: var(--ff-head);
+    font-size: 1.6rem;
+    font-weight: 300;
+    font-style: italic;
+    color: var(--navy);
+    line-height: 1.5;
+    border-left: 3px solid var(--gold);
+    padding-left: 1.5rem;
+    margin: 2rem 0;
+  }
+  .about-body {
+    font-size: 0.95rem;
+    color: var(--text-mid);
+    line-height: 1.9;
+    margin-bottom: 1.2rem;
+  }
+  .about-pillars {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; margin-top: 2.5rem;
+  }
+  .about-pillar {
+    padding: 1.2rem;
+    border: 1px solid var(--cream);
+    background: var(--white);
+    transition: border-color 0.3s, box-shadow 0.3s;
+  }
+  .about-pillar:hover {
+    border-color: var(--gold);
+    box-shadow: var(--shadow-sm);
+  }
+  .pillar-icon { font-size: 1.4rem; margin-bottom: 0.6rem; }
+  .pillar-title {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--navy);
+    margin-bottom: 4px;
+  }
+  .pillar-desc {
+    font-size: 0.8rem;
+    color: var(--text-mid);
+    line-height: 1.6;
+  }
+
+  /* =============================================
+     DOCTOR
+  ============================================= */
+  #doctor {
+    padding: 8rem 0;
+    background: var(--navy);
+    position: relative; overflow: hidden;
+  }
+  .doctor-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 70% 70% at 30% 50%, rgba(42,124,117,0.1) 0%, transparent 60%);
+  }
+  .doctor-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 6rem; align-items: center;
+    position: relative; z-index: 1;
+  }
+  .doctor-tag { color: var(--gold-lt); }
+  .doctor-tag::before { background: var(--gold-lt); }
+  .doctor-title { color: var(--white); }
+  .doctor-desc {
+    font-size: 0.95rem;
+    color: rgba(255,255,255,0.55);
+    line-height: 1.9;
+    margin: 1.5rem 0 2rem;
+  }
+  .doctor-credentials {
+    display: flex; flex-direction: column; gap: 1rem; margin-bottom: 2.5rem;
+  }
+  .doctor-cred-item {
+    display: flex; align-items: flex-start; gap: 1rem;
+    padding: 1rem 1.2rem;
+    background: rgba(255,255,255,0.04);
+    border-left: 2px solid var(--gold);
+  }
+  .cred-icon { font-size: 1.2rem; flex-shrink: 0; margin-top: 2px; }
+  .cred-title {
+    font-size: 0.82rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--gold-lt);
+    margin-bottom: 2px;
+  }
+  .cred-desc { font-size: 0.82rem; color: rgba(255,255,255,0.5); }
+  .doctor-visual { position: relative; }
+  .doctor-photo-frame {
+    width: 100%; aspect-ratio: 3/4;
+    background: linear-gradient(145deg, rgba(42,124,117,0.2) 0%, rgba(13,27,42,0.8) 100%);
+    border: 1px solid rgba(255,255,255,0.08);
+    position: relative; overflow: hidden;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .doctor-photo-placeholder {
+    text-align: center; color: rgba(255,255,255,0.3);
+  }
+  .doctor-photo-placeholder .icon { font-size: 5rem; margin-bottom: 1rem; }
+  .doctor-name-plate {
+    position: absolute; bottom: 2rem; left: 2rem; right: 2rem;
+    background: rgba(13,27,42,0.9);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(184,151,90,0.2);
+    padding: 1.2rem 1.5rem;
+  }
+  .doctor-name {
+    font-family: var(--ff-head);
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: var(--white);
+  }
+  .doctor-role {
+    font-size: 0.72rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    margin-top: 4px;
+  }
+  .doctor-exp-badge {
+    position: absolute; top: 2rem; right: -1.5rem;
+    background: var(--gold);
+    width: 90px; height: 90px;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    text-align: center;
+  }
+  .exp-num {
+    font-family: var(--ff-head);
+    font-size: 2rem;
+    font-weight: 500;
+    color: var(--white);
+    line-height: 1;
+  }
+  .exp-label {
+    font-size: 0.6rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.8);
+  }
+
+  /* =============================================
+     SERVICES
+  ============================================= */
+  #services { padding: 8rem 0; background: var(--white); }
+  .services-header { text-align: center; margin-bottom: 4rem; }
+  .services-header .section-subtitle { margin: 0 auto; }
+  .services-header .divider { margin: 1.5rem auto; }
+  .services-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px;
+    background: var(--cream);
+  }
+  .service-card {
+    background: var(--white);
+    padding: 2.5rem 2rem;
+    position: relative;
+    transition: background 0.3s, transform 0.3s var(--ease-out);
+    cursor: default; overflow: hidden;
+  }
+  .service-card::before {
+    content: '';
+    position: absolute; top: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--gold), var(--teal));
+    transform: scaleX(0); transform-origin: left;
+    transition: transform 0.4s var(--ease-out);
+  }
+  .service-card:hover::before { transform: scaleX(1); }
+  .service-card:hover { background: var(--ivory); }
+  .service-card.featured {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .service-card.featured .service-title { color: var(--white); }
+  .service-card.featured .service-desc { color: rgba(255,255,255,0.55); }
+  .service-card.featured::before { transform: scaleX(1); }
+  .service-icon-wrap {
+    width: 52px; height: 52px;
+    background: var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1.4rem; margin-bottom: 1.5rem;
+    transition: background 0.3s;
+  }
+  .service-card.featured .service-icon-wrap {
+    background: rgba(184,151,90,0.2);
+  }
+  .service-card:hover .service-icon-wrap { background: var(--gold); }
+  .service-number {
+    position: absolute; top: 1.5rem; right: 2rem;
+    font-family: var(--ff-head);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--cream);
+    line-height: 1;
+    pointer-events: none;
+    transition: color 0.3s;
+  }
+  .service-card.featured .service-number { color: rgba(255,255,255,0.05); }
+  .service-card:hover .service-number { color: rgba(184,151,90,0.15); }
+  .service-title {
+    font-family: var(--ff-head);
+    font-size: 1.3rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.6rem;
+  }
+  .service-desc {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+    margin-bottom: 1.2rem;
+  }
+  .service-link {
+    display: inline-flex; align-items: center; gap: 0.4rem;
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold);
+    font-weight: 500;
+    transition: gap 0.3s;
+  }
+  .service-link:hover { gap: 0.8rem; }
+
+  /* =============================================
+     PROCESS
+  ============================================= */
+  #process { padding: 8rem 0; background: var(--ivory); }
+  .process-header { text-align: center; margin-bottom: 5rem; }
+  .process-header .divider { margin: 1.5rem auto; }
+  .process-steps {
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 0;
+    position: relative;
+  }
+  .process-steps::before {
+    content: '';
+    position: absolute;
+    top: 2.6rem; left: 12%; right: 12%;
+    height: 1px;
+    background: linear-gradient(90deg, var(--gold), var(--teal), var(--gold));
+    opacity: 0.4;
+  }
+  .process-step {
+    text-align: center;
+    padding: 0 1.5rem;
+    position: relative;
+  }
+  .step-circle {
+    width: 52px; height: 52px;
+    border: 1.5px solid var(--gold);
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 2rem;
+    font-family: var(--ff-head);
+    font-size: 1.2rem;
+    font-weight: 300;
+    color: var(--gold);
+    background: var(--ivory);
+    position: relative; z-index: 1;
+    transition: all 0.3s;
+  }
+  .process-step:hover .step-circle {
+    background: var(--gold);
+    color: var(--white);
+    transform: scale(1.1);
+  }
+  .step-title {
+    font-family: var(--ff-head);
+    font-size: 1.15rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .step-desc {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    line-height: 1.7;
+  }
+
+  /* =============================================
+     TESTIMONIALS
+  ============================================= */
+  #testimonials {
+    padding: 8rem 0;
+    background: var(--navy);
+    position: relative; overflow: hidden;
+  }
+  .testimonials-bg {
+    position: absolute; inset: 0;
+    background: radial-gradient(ellipse 80% 60% at 80% 20%, rgba(184,151,90,0.08) 0%, transparent 50%);
+  }
+  .testimonials-header {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    margin-bottom: 4rem;
+    position: relative; z-index: 1;
+  }
+  .testimonials-header .section-title { color: var(--white); }
+  .testimonials-header .section-title em { color: var(--gold-lt); }
+  .testimonials-nav {
+    display: flex; gap: 0.8rem; flex-shrink: 0; padding-bottom: 0.5rem;
+  }
+  .testimonials-nav button {
+    width: 44px; height: 44px;
+    border: 1px solid rgba(255,255,255,0.15);
+    color: rgba(255,255,255,0.5);
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s;
+    font-size: 1.1rem;
+  }
+  .testimonials-nav button:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(184,151,90,0.1);
+  }
+  .testimonials-track-wrap { overflow: hidden; position: relative; z-index: 1; }
+  .testimonials-track {
+    display: flex; gap: 1.5rem;
+    transition: transform 0.6s var(--ease-out);
+  }
+  .testimonial-card {
+    min-width: calc(33.33% - 1rem);
+    background: rgba(255,255,255,0.04);
+    border: 1px solid rgba(255,255,255,0.06);
+    padding: 2.5rem;
+    flex-shrink: 0;
+    position: relative;
+    transition: background 0.3s, border-color 0.3s;
+  }
+  .testimonial-card:hover {
+    background: rgba(255,255,255,0.07);
+    border-color: rgba(184,151,90,0.2);
+  }
+  .testimonial-quote-icon {
+    font-family: var(--ff-head);
+    font-size: 5rem;
+    font-weight: 300;
+    color: var(--gold);
+    opacity: 0.3;
+    line-height: 0.5;
+    margin-bottom: 1.5rem;
+  }
+  .testimonial-stars {
+    display: flex; gap: 3px; margin-bottom: 1.2rem; font-size: 0.85rem;
+  }
+  .testimonial-text {
+    font-family: var(--ff-head);
+    font-size: 1.05rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+  .testimonial-author {
+    display: flex; align-items: center; gap: 1rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    padding-top: 1.5rem;
+  }
+  .testimonial-avatar {
+    width: 42px; height: 42px;
+    background: var(--teal);
+    display: flex; align-items: center; justify-content: center;
+    font-family: var(--ff-head);
+    font-size: 1.1rem;
+    color: var(--white);
+    flex-shrink: 0;
+  }
+  .author-name {
+    font-size: 0.88rem;
+    font-weight: 500;
+    color: var(--white);
+  }
+  .author-tag {
+    font-size: 0.72rem;
+    color: rgba(255,255,255,0.4);
+    letter-spacing: 0.05em;
+  }
+  .author-verified {
+    margin-left: auto;
+    font-size: 0.65rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    display: flex; align-items: center; gap: 4px;
+  }
+  .author-verified::before {
+    content: '✓';
+    font-size: 0.7rem;
+  }
+  .testimonials-summary {
+    display: flex; align-items: center; gap: 3rem; margin-top: 3rem;
+    padding-top: 3rem;
+    border-top: 1px solid rgba(255,255,255,0.07);
+    position: relative; z-index: 1;
+  }
+  .summary-rating {
+    display: flex; flex-direction: column; align-items: center;
+    flex-shrink: 0;
+  }
+  .summary-num {
+    font-family: var(--ff-head);
+    font-size: 4rem;
+    font-weight: 300;
+    color: var(--white);
+    line-height: 1;
+  }
+  .summary-stars { font-size: 1.1rem; margin: 0.3rem 0; }
+  .summary-count {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.4);
+  }
+  .summary-sep { width: 1px; height: 80px; background: rgba(255,255,255,0.1); flex-shrink: 0; }
+  .summary-text {
+    font-family: var(--ff-head);
+    font-size: 1.3rem;
+    font-weight: 300;
+    font-style: italic;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.6;
+    max-width: 500px;
+  }
+
+  /* =============================================
+     CTA STRIP
+  ============================================= */
+  #cta-strip {
+    padding: 5rem 0;
+    background: var(--gold);
+    position: relative; overflow: hidden;
+  }
+  .cta-strip-bg {
+    position: absolute; inset: 0;
+    background: linear-gradient(135deg, var(--gold-dk) 0%, var(--gold) 50%, var(--gold-lt) 100%);
+  }
+  .cta-strip-inner {
+    position: relative; z-index: 1;
+    display: flex; align-items: center; justify-content: space-between; gap: 3rem; flex-wrap: wrap;
+  }
+  .cta-strip-text .overline {
+    font-size: 0.7rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 0.5rem;
+  }
+  .cta-strip-title {
+    font-family: var(--ff-head);
+    font-size: clamp(1.8rem, 3vw, 2.8rem);
+    font-weight: 300;
+    color: var(--white);
+  }
+  .cta-strip-actions { display: flex; gap: 1rem; flex-wrap: wrap; flex-shrink: 0; }
+  .btn-white {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    background: var(--white);
+    color: var(--gold-dk);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+  }
+  .btn-white:hover {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .btn-outline-white {
+    display: inline-flex; align-items: center; gap: 0.6rem;
+    border: 1px solid rgba(255,255,255,0.5);
+    color: var(--white);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 1rem 2rem;
+    transition: all 0.3s;
+  }
+  .btn-outline-white:hover {
+    background: rgba(255,255,255,0.15);
+  }
+
+  /* =============================================
+     APPOINTMENT
+  ============================================= */
+  #appointment { padding: 8rem 0; background: var(--ivory); }
+  .appt-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start;
+  }
+  .appt-form-wrap {
+    background: var(--white);
+    padding: 3rem;
+    box-shadow: var(--shadow-md);
+    border-top: 3px solid var(--gold);
+  }
+  .form-title {
+    font-family: var(--ff-head);
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .form-subtitle {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    margin-bottom: 2rem;
+    line-height: 1.6;
+  }
+  .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+  .form-group { display: flex; flex-direction: column; gap: 0.4rem; margin-bottom: 1.2rem; }
+  .form-group label {
+    font-size: 0.72rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-mid);
+    font-weight: 500;
+  }
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    border: 1px solid var(--cream);
+    padding: 0.9rem 1rem;
+    font-family: var(--ff-body);
+    font-size: 0.92rem;
+    color: var(--text-body);
+    background: var(--ivory);
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    appearance: none;
+  }
+  .form-group input:focus,
+  .form-group select:focus,
+  .form-group textarea:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(184,151,90,0.1);
+    background: var(--white);
+  }
+  .form-group textarea { resize: vertical; min-height: 90px; }
+  .form-note {
+    font-size: 0.78rem;
+    color: var(--text-lt);
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+  .form-note a { color: var(--gold); }
+  .form-submit { width: 100%; justify-content: center; font-size: 0.85rem; padding: 1.2rem; }
+  .form-success {
+    display: none;
+    text-align: center; padding: 2rem;
+    background: rgba(42,124,117,0.08);
+    border: 1px solid rgba(42,124,117,0.2);
+  }
+  .form-success.show { display: block; }
+  .appt-info { }
+  .appt-info-title {
+    font-family: var(--ff-head);
+    font-size: 2rem;
+    font-weight: 300;
+    color: var(--navy);
+    margin-bottom: 0.5rem;
+  }
+  .appt-info-desc {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    margin-bottom: 2.5rem;
+  }
+  .contact-items { display: flex; flex-direction: column; gap: 1.2rem; margin-bottom: 2.5rem; }
+  .contact-item {
+    display: flex; align-items: flex-start; gap: 1.2rem;
+    padding: 1.2rem;
+    background: var(--white);
+    border: 1px solid var(--cream);
+    transition: border-color 0.3s;
+  }
+  .contact-item:hover { border-color: var(--gold); }
+  .contact-icon {
+    width: 40px; height: 40px; flex-shrink: 0;
+    background: var(--navy);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem;
+  }
+  .contact-label {
+    font-size: 0.7rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-lt);
+    margin-bottom: 3px;
+  }
+  .contact-value {
+    font-size: 0.9rem;
+    color: var(--text-body);
+    font-weight: 500;
+  }
+  .contact-value a { color: var(--gold); }
+  .hours-grid {
+    display: grid; grid-template-columns: 1fr 1fr; gap: 0.5rem;
+    padding: 1.5rem;
+    background: var(--navy);
+  }
+  .hour-row { display: flex; justify-content: space-between; align-items: center; }
+  .hour-day { font-size: 0.78rem; color: rgba(255,255,255,0.5); }
+  .hour-time { font-size: 0.78rem; color: var(--gold-lt); font-weight: 500; }
+
+  /* =============================================
+     FAQ
+  ============================================= */
+  #faq { padding: 8rem 0; background: var(--white); }
+  .faq-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .faq-list { display: flex; flex-direction: column; gap: 0; }
+  .faq-item { border-bottom: 1px solid var(--cream); }
+  .faq-question {
+    width: 100%;
+    display: flex; align-items: center; justify-content: space-between; gap: 1rem;
+    padding: 1.5rem 0;
+    text-align: left;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--navy);
+    transition: color 0.2s;
+  }
+  .faq-question:hover { color: var(--gold); }
+  .faq-toggle {
+    width: 24px; height: 24px; flex-shrink: 0;
+    border: 1px solid var(--cream);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 1rem; color: var(--gold);
+    transition: all 0.3s; font-style: normal;
+  }
+  .faq-item.open .faq-toggle { background: var(--gold); color: var(--white); transform: rotate(45deg); }
+  .faq-answer {
+    font-size: 0.88rem;
+    color: var(--text-mid);
+    line-height: 1.8;
+    max-height: 0; overflow: hidden;
+    transition: max-height 0.4s var(--ease-out), padding 0.3s;
+    padding: 0;
+  }
+  .faq-item.open .faq-answer { max-height: 300px; padding-bottom: 1.5rem; }
+
+  /* =============================================
+     MAP / LOCATION
+  ============================================= */
+  #location { padding: 8rem 0; background: var(--ivory); }
+  .location-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: start; }
+  .map-container {
+    width: 100%; aspect-ratio: 4/3;
+    background: var(--cream);
+    position: relative; overflow: hidden;
+    border: 1px solid var(--cream);
+  }
+  .map-container iframe {
+    width: 100%; height: 100%; border: none;
+    filter: grayscale(20%);
+  }
+  .location-info { }
+  .location-address-card {
+    background: var(--white);
+    padding: 2rem;
+    border: 1px solid var(--cream);
+    border-left: 3px solid var(--gold);
+    margin-bottom: 1.5rem;
+  }
+  .address-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.8rem;
+  }
+  .address-text {
+    font-family: var(--ff-head);
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--navy);
+    line-height: 1.6;
+  }
+  .nearby-landmarks {
+    display: flex; flex-direction: column; gap: 0.6rem; margin-top: 1rem;
+  }
+  .landmark {
+    display: flex; align-items: center; gap: 0.6rem;
+    font-size: 0.82rem; color: var(--text-mid);
+  }
+  .landmark::before { content: '→'; color: var(--gold); font-size: 0.8rem; }
+  .direction-btns { display: flex; gap: 1rem; margin-top: 2rem; flex-wrap: wrap; }
+  .direction-btn {
+    display: inline-flex; align-items: center; gap: 0.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    transition: all 0.3s;
+  }
+  .direction-btn.primary {
+    background: var(--navy);
+    color: var(--white);
+  }
+  .direction-btn.primary:hover { background: var(--gold); }
+  .direction-btn.secondary {
+    border: 1px solid var(--cream);
+    color: var(--text-body);
+  }
+  .direction-btn.secondary:hover { border-color: var(--navy); }
+
+  /* =============================================
+     FOOTER
+  ============================================= */
+  #footer {
+    background: var(--navy);
+    padding: 5rem 0 2rem;
+  }
+  .footer-top {
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 4rem;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+    margin-bottom: 2.5rem;
+  }
+  .footer-brand-desc {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.4);
+    line-height: 1.8;
+    margin: 1.2rem 0 1.8rem;
+    max-width: 300px;
+  }
+  .footer-socials {
+    display: flex; gap: 0.8rem;
+  }
+  .footer-social {
+    width: 36px; height: 36px;
+    border: 1px solid rgba(255,255,255,0.1);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 0.85rem; color: rgba(255,255,255,0.5);
+    transition: all 0.3s;
+  }
+  .footer-social:hover {
+    border-color: var(--gold);
+    color: var(--gold);
+    background: rgba(184,151,90,0.1);
+  }
+  .footer-col-title {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--gold-lt);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .footer-links { display: flex; flex-direction: column; gap: 0.8rem; list-style: none; }
+  .footer-links a {
+    font-size: 0.85rem;
+    color: rgba(255,255,255,0.45);
+    transition: color 0.2s;
+    display: inline-flex; align-items: center; gap: 0.4rem;
+  }
+  .footer-links a:hover { color: var(--white); }
+  .footer-links a::before { content: '—'; font-size: 0.65rem; color: var(--gold); opacity: 0.5; }
+  .footer-bottom {
+    display: flex; align-items: center; justify-content: space-between;
+    font-size: 0.78rem; color: rgba(255,255,255,0.25);
+    flex-wrap: wrap; gap: 1rem;
+  }
+  .footer-bottom a { color: rgba(255,255,255,0.35); transition: color 0.2s; }
+  .footer-bottom a:hover { color: var(--white); }
+
+  /* =============================================
+     STICKY PHONE BUTTON
+  ============================================= */
+  .sticky-call {
+    position: fixed; bottom: 2rem; right: 2rem;
+    z-index: 90;
+    display: flex; flex-direction: column; gap: 0.8rem; align-items: flex-end;
+  }
+  .sticky-btn {
+    display: flex; align-items: center; gap: 0.6rem;
+    padding: 0.9rem 1.5rem;
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s, box-shadow 0.3s;
+    white-space: nowrap;
+  }
+  .sticky-btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-lg); }
+  .sticky-btn.call { background: var(--gold); color: var(--white); }
+  .sticky-btn.whatsapp { background: #25D366; color: var(--white); }
+
+  /* =============================================
+     RESPONSIVE
+  ============================================= */
+  @media (max-width: 1024px) {
+    .hero-content { grid-template-columns: 1fr; }
+    .hero-right { display: none; }
+    .about-grid { grid-template-columns: 1fr; gap: 4rem; }
+    .about-visual { order: -1; }
+    .doctor-grid { grid-template-columns: 1fr; gap: 3rem; }
+    .doctor-visual { display: none; }
+    .services-grid { grid-template-columns: repeat(2, 1fr); }
+    .testimonial-card { min-width: calc(50% - 0.75rem); }
+    .appt-grid { grid-template-columns: 1fr; }
+    .faq-grid { grid-template-columns: 1fr; }
+    .location-grid { grid-template-columns: 1fr; }
+    .footer-top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+    .process-steps { grid-template-columns: repeat(2, 1fr); gap: 2rem; }
+    .process-steps::before { display: none; }
+  }
+  @media (max-width: 768px) {
+    .nav-links, .nav-cta .nav-phone { display: none; }
+    .hamburger { display: flex; }
+    .container { padding: 0 1.2rem; }
+    .services-grid { grid-template-columns: 1fr; }
+    .testimonial-card { min-width: calc(100% - 0px); }
+    .form-row { grid-template-columns: 1fr; }
+    .testimonials-header { flex-direction: column; align-items: flex-start; gap: 1.5rem; }
+    .cta-strip-inner { flex-direction: column; }
+    .sticky-btn span { display: none; }
+    .sticky-btn { padding: 0.9rem; border-radius: 50%; width: 52px; height: 52px; justify-content: center; }
+    .footer-top { grid-template-columns: 1fr; gap: 2rem; }
+    .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+    .process-steps { grid-template-columns: 1fr; }
+    .about-pillars { grid-template-columns: 1fr; }
+    .hours-grid { grid-template-columns: 1fr; }
+    .about-corner-tag { display: none; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ==================== NAVBAR ==================== -->
+<nav id="navbar">
+  <div class="container">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">🦷</div>
+        <div class="nav-logo-text">
+          <div class="nav-logo-name">Life Kare Dental</div>
+          <div class="nav-logo-sub">Hospital · Vanasthalipuram</div>
+        </div>
+      </a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#doctor">Our Doctor</a></li>
+        <li><a href="#testimonials">Reviews</a></li>
+        <li><a href="#appointment">Contact</a></li>
+      </ul>
+      <div class="nav-cta">
+        <a href="tel:+918465923623" class="nav-phone">
+          <svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+          084659 23623
+        </a>
+        <a href="#appointment" class="btn-primary"><span>Book Appointment</span></a>
+      </div>
+      <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<!-- Mobile Menu -->
+<div class="mobile-menu" id="mobile-menu">
+  <span class="mobile-close" onclick="toggleMenu()">✕</span>
+  <a href="#about" onclick="toggleMenu()">About</a>
+  <a href="#services" onclick="toggleMenu()">Services</a>
+  <a href="#doctor" onclick="toggleMenu()">Our Doctor</a>
+  <a href="#testimonials" onclick="toggleMenu()">Reviews</a>
+  <a href="#appointment" onclick="toggleMenu()">Book Appointment</a>
+  <a href="tel:+918465923623" style="color:var(--gold-lt); font-size:1.2rem; font-family:var(--ff-body); margin-top:1rem;">📞 084659 23623</a>
+</div>
+
+<!-- ==================== HERO ==================== -->
+<section id="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-grain"></div>
+  <div class="hero-lines">
+    <svg viewBox="0 0 1440 900" preserveAspectRatio="none" fill="none">
+      <path d="M0 600 Q 360 400 720 500 T 1440 300" stroke="rgba(184,151,90,0.08)" stroke-width="1" fill="none" stroke-dasharray="8 4"/>
+      <path d="M0 200 Q 400 350 800 250 T 1440 450" stroke="rgba(42,124,117,0.07)" stroke-width="1" fill="none"/>
+      <circle cx="1200" cy="200" r="200" stroke="rgba(184,151,90,0.05)" stroke-width="1" fill="none"/>
+      <circle cx="1200" cy="200" r="300" stroke="rgba(184,151,90,0.03)" stroke-width="1" fill="none"/>
+    </svg>
+  </div>
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-left">
+        <div class="hero-badge">Vanasthalipuram's Trusted Dental Care</div>
+        <h1 class="hero-title">
+          Your Smile<br>
+          Deserves <em>Expert</em><br>
+          Attention
+        </h1>
+        <p class="hero-desc">
+          Experience precision dental care under Dr. Vijay Kumar — combining advanced technology, gentle techniques, and a patient-first philosophy for results that last a lifetime.
+        </p>
+        <div class="hero-actions">
+          <a href="#appointment" class="btn-primary">
+            <span>Book a Free Consultation</span>
+            <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <a href="tel:+918465923623" class="btn-outline" style="border-color:rgba(255,255,255,0.25); color:rgba(255,255,255,0.7);">
+            <span>Call Now</span>
+          </a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <div class="hero-stat-num">4.9<span>★</span></div>
+            <div class="hero-stat-label">Google Rating</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">409<span>+</span></div>
+            <div class="hero-stat-label">Happy Patients</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">15<span>+</span></div>
+            <div class="hero-stat-label">Yrs Experience</div>
+          </div>
+          <div>
+            <div class="hero-stat-num">18<span>+</span></div>
+            <div class="hero-stat-label">Treatments</div>
+          </div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="hero-card-main">
+          <div class="hero-smile-icon">🦷</div>
+          <div class="hero-card-title">Advanced Care,<br>Gentle Touch</div>
+          <div class="hero-card-desc">State-of-the-art dental hospital with laser technology, digital X-rays, and sterilised treatment rooms.</div>
+          <div class="hero-services-list">
+            <div class="hero-service-item"><span class="hero-service-dot"></span>Painless Dental Implants</div>
+            <div class="hero-service-item"><span class="hero-service-dot"></span>Cosmetic & Smile Makeovers</div>
+            <div class="hero-service-item"><span class="hero-service-dot"></span>Laser Dentistry</div>
+            <div class="hero-service-item"><span class="hero-service-dot"></span>Emergency Dental Care</div>
+          </div>
+          <div class="hero-rating-card">
+            <div class="hero-rating-stars">⭐⭐⭐⭐⭐</div>
+            <div class="hero-rating-num">4.9</div>
+            <div class="hero-rating-label">409 Reviews</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll">
+    <div class="scroll-line"></div>
+    <span>Scroll</span>
+  </div>
+</section>
+
+<!-- ==================== TRUST BAR ==================== -->
+<div id="trust-bar">
+  <div class="trust-track" id="trust-track">
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Painless Procedures</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>4.9★ — 409 Google Reviews</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Digital X-Rays & Laser Technology</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Emergency Care Available</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Sterilised, Hygienic Environment</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Online Appointment Booking</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Experienced Senior Doctor</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Comprehensive Dental Services</div>
+    <!-- Duplicate for infinite scroll -->
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Painless Procedures</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>4.9★ — 409 Google Reviews</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Digital X-Rays & Laser Technology</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Emergency Care Available</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Sterilised, Hygienic Environment</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Online Appointment Booking</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>Experienced Senior Doctor</div>
+    <div class="trust-item"><svg width="14" height="14" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>Comprehensive Dental Services</div>
+  </div>
+</div>
+
+<!-- ==================== ABOUT ==================== -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-visual reveal">
+        <div class="about-corner-tag">Est. in Vanasthalipuram</div>
+        <div class="about-img-main">
+          <div class="about-img-placeholder">
+            <div class="icon">🏥</div>
+            <div class="about-img-label">Life Kare Dental Hospital</div>
+          </div>
+        </div>
+        <div class="about-accent-card">
+          <div class="about-accent-num">409+</div>
+          <div class="about-accent-label">Smiles Transformed</div>
+        </div>
+      </div>
+      <div class="about-text reveal reveal-delay-2">
+        <div class="tag">Our Philosophy</div>
+        <h2 class="section-title">More Than a<br><em>Dental Visit</em></h2>
+        <div class="about-quote">
+          "Every patient deserves to leave our clinic with more confidence than they walked in with."
+        </div>
+        <p class="about-body">
+          At Life Kare Dental Hospital, we believe that exceptional dental care goes far beyond treating teeth — it is about understanding each patient's concerns, respecting their time, and delivering outcomes that genuinely change lives.
+        </p>
+        <p class="about-body">
+          Nestled in the heart of Vanasthalipuram, our hospital combines the warmth of a trusted neighbourhood clinic with the capabilities of a modern dental facility. From routine check-ups to complex implant surgeries, every procedure is performed with meticulous precision and a deeply personal touch.
+        </p>
+        <div class="divider"></div>
+        <div class="about-pillars">
+          <div class="about-pillar">
+            <div class="pillar-icon">🎯</div>
+            <div class="pillar-title">Precision Care</div>
+            <div class="pillar-desc">Treatments guided by thorough diagnosis and the latest clinical protocols.</div>
+          </div>
+          <div class="about-pillar">
+            <div class="pillar-icon">🛡️</div>
+            <div class="pillar-title">Sterilised & Safe</div>
+            <div class="pillar-desc">Stringent hygiene standards across every treatment room, every day.</div>
+          </div>
+          <div class="about-pillar">
+            <div class="pillar-icon">💬</div>
+            <div class="pillar-title">Patient First</div>
+            <div class="pillar-desc">We listen, explain, and ensure you are comfortable every step of the way.</div>
+          </div>
+          <div class="about-pillar">
+            <div class="pillar-icon">⚡</div>
+            <div class="pillar-title">Modern Technology</div>
+            <div class="pillar-desc">Digital X-rays, laser dentistry, and advanced implant systems.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== DOCTOR ==================== -->
+<section id="doctor">
+  <div class="doctor-bg"></div>
+  <div class="container">
+    <div class="doctor-grid">
+      <div class="reveal">
+        <div class="tag doctor-tag">Meet Your Doctor</div>
+        <h2 class="section-title doctor-title">Dr. Vijay Kumar<br><em style="color:var(--teal-lt)">BDS, MDS</em></h2>
+        <p class="doctor-desc">
+          With over 15 years of dedicated clinical experience, Dr. Vijay Kumar has built a reputation as one of Vanasthalipuram's most trusted dental professionals. His approach — patient, thorough, and genuinely caring — has earned him hundreds of five-star reviews and a loyal patient community.
+        </p>
+        <div class="doctor-credentials">
+          <div class="doctor-cred-item">
+            <div class="cred-icon">🎓</div>
+            <div>
+              <div class="cred-title">Qualifications</div>
+              <div class="cred-desc">BDS & MDS — specialised in oral surgery, implantology, and cosmetic dentistry with advanced training certifications.</div>
+            </div>
+          </div>
+          <div class="doctor-cred-item">
+            <div class="cred-icon">🏆</div>
+            <div>
+              <div class="cred-title">Expertise</div>
+              <div class="cred-desc">Implants, laser procedures, smile makeovers, root canals, complex extractions, and full-mouth rehabilitation.</div>
+            </div>
+          </div>
+          <div class="doctor-cred-item">
+            <div class="cred-icon">❤️</div>
+            <div>
+              <div class="cred-title">Patient Philosophy</div>
+              <div class="cred-desc">"I want every patient to feel heard, comfortable, and confident in the treatment plan before we begin."</div>
+            </div>
+          </div>
+        </div>
+        <a href="#appointment" class="btn-outline" style="border-color:rgba(184,151,90,0.4); color:var(--gold-lt);">
+          Book with Dr. Vijay Kumar
+        </a>
+      </div>
+      <div class="doctor-visual reveal reveal-delay-2">
+        <div class="doctor-photo-frame">
+          <div class="doctor-photo-placeholder">
+            <div class="icon">👨‍⚕️</div>
+            <div style="font-size:0.75rem; letter-spacing:0.1em; text-transform:uppercase;">Dr. Vijay Kumar</div>
+          </div>
+          <div class="doctor-name-plate">
+            <div class="doctor-name">Dr. Vijay Kumar</div>
+            <div class="doctor-role">Chief Dental Surgeon · BDS, MDS</div>
+          </div>
+        </div>
+        <div class="doctor-exp-badge">
+          <div class="exp-num">15+</div>
+          <div class="exp-label">Years of Experience</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== SERVICES ==================== -->
+<section id="services">
+  <div class="container">
+    <div class="services-header reveal">
+      <div class="tag">What We Offer</div>
+      <h2 class="section-title">Complete <em>Dental Services</em><br>Under One Roof</h2>
+      <div class="divider"></div>
+      <p class="section-subtitle">From your first check-up to complex restorative work — we handle every aspect of your oral health with expertise and care.</p>
+    </div>
+    <div class="services-grid reveal">
+      <div class="service-card featured">
+        <div class="service-number">01</div>
+        <div class="service-icon-wrap">🦷</div>
+        <div class="service-title">Dental Implants</div>
+        <div class="service-desc">The gold standard for replacing missing teeth. Dr. Vijay's implants are precise, seamless, and designed to last a lifetime.</div>
+        <a href="#appointment" class="service-link">Book Consultation →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">02</div>
+        <div class="service-icon-wrap">✨</div>
+        <div class="service-title">Smile Makeover</div>
+        <div class="service-desc">Comprehensive cosmetic transformation combining whitening, veneers, reshaping, and bonding for a radiant smile.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">03</div>
+        <div class="service-icon-wrap">⚡</div>
+        <div class="service-title">Laser Dentistry</div>
+        <div class="service-desc">Minimally invasive laser treatments for gum disease, whitening, and oral surgery — faster recovery, less discomfort.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">04</div>
+        <div class="service-icon-wrap">🌿</div>
+        <div class="service-title">Root Canal Therapy</div>
+        <div class="service-desc">Save your natural tooth with our painless, modern RCT procedure. Most patients are surprised by how comfortable it is.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">05</div>
+        <div class="service-icon-wrap">👑</div>
+        <div class="service-title">Crowns & Veneers</div>
+        <div class="service-desc">Beautifully crafted porcelain crowns and veneers that restore function and create a natural, luminous appearance.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">06</div>
+        <div class="service-icon-wrap">🔬</div>
+        <div class="service-title">Teeth Whitening</div>
+        <div class="service-desc">Professional-grade whitening treatments that safely brighten your smile by several shades in a single session.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">07</div>
+        <div class="service-icon-wrap">🛡️</div>
+        <div class="service-title">Oral Surgery</div>
+        <div class="service-desc">Expert extraction, wisdom tooth removal, and minor surgical procedures performed with utmost precision and care.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">08</div>
+        <div class="service-icon-wrap">🏥</div>
+        <div class="service-title">Dentures & Bridges</div>
+        <div class="service-desc">Customised prosthetics that restore your smile's function and aesthetics with natural-looking, durable materials.</div>
+        <a href="#appointment" class="service-link">Learn More →</a>
+      </div>
+      <div class="service-card">
+        <div class="service-number">09</div>
+        <div class="service-icon-wrap">🚨</div>
+        <div class="service-title">Emergency Care</div>
+        <div class="service-desc">Sudden tooth pain, fractures, or dental accidents? We provide prompt emergency care when you need it most.</div>
+        <a href="tel:+918465923623" class="service-link">Call Now →</a>
+      </div>
+    </div>
+    <div style="text-align:center; margin-top:3rem;" class="reveal">
+      <p style="font-size:0.85rem; color:var(--text-lt); margin-bottom:1.5rem;">Also offering: Check-ups, Fillings & Sealants, Teeth Cleaning, Bonding, Mouth Guards, Teeth Reshaping & Digital X-Rays</p>
+      <a href="#appointment" class="btn-primary"><span>Explore All Services</span></a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== PROCESS ==================== -->
+<section id="process">
+  <div class="container">
+    <div class="process-header reveal">
+      <div class="tag">Your Journey</div>
+      <h2 class="section-title">Simple, Seamless,<br><em>Stress-Free</em></h2>
+      <div class="divider"></div>
+      <p class="section-subtitle" style="margin:0 auto;">From first contact to your final smile — we make every step effortless.</p>
+    </div>
+    <div class="process-steps">
+      <div class="process-step reveal">
+        <div class="step-circle">01</div>
+        <div class="step-title">Book Online</div>
+        <div class="step-desc">Choose your preferred date and time via our online form, WhatsApp, or a quick phone call.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-1">
+        <div class="step-circle">02</div>
+        <div class="step-title">Free Consultation</div>
+        <div class="step-desc">Dr. Vijay Kumar reviews your concerns, performs a thorough exam, and explains your personalised treatment plan.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-2">
+        <div class="step-circle">03</div>
+        <div class="step-title">Expert Treatment</div>
+        <div class="step-desc">Comfortable, precise treatment in our fully equipped, sterilised rooms — with your comfort as the priority.</div>
+      </div>
+      <div class="process-step reveal reveal-delay-3">
+        <div class="step-circle">04</div>
+        <div class="step-title">Aftercare & Follow-Up</div>
+        <div class="step-desc">We remain available for all post-treatment questions and schedule follow-ups to ensure lasting results.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== TESTIMONIALS ==================== -->
+<section id="testimonials">
+  <div class="testimonials-bg"></div>
+  <div class="container">
+    <div class="testimonials-header reveal">
+      <div>
+        <div class="tag doctor-tag">Patient Stories</div>
+        <h2 class="section-title">What Our Patients<br>Are <em>Saying</em></h2>
+      </div>
+      <div class="testimonials-nav">
+        <button onclick="slideTestimonials(-1)" title="Previous">←</button>
+        <button onclick="slideTestimonials(1)" title="Next">→</button>
+      </div>
+    </div>
+    <div class="testimonials-track-wrap reveal">
+      <div class="testimonials-track" id="testimonials-track">
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">"</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-text">Dr. Vijay Kumar was very professional, gentle, and explained every step clearly. The clinic is clean, well-equipped, and the staff are friendly and caring. Truly a world-class experience right here in Vanasthalipuram.</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">R</div>
+            <div>
+              <div class="author-name">Ravi S.</div>
+              <div class="author-tag">Dental Implant Patient</div>
+            </div>
+            <div class="author-verified">Verified</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">"</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-text">Had my recent dental implant done here. Dr. Vijay is a very experienced, caring doctor who truly listens to his patients. The implant process was seamless and completely painless. Thank you, Dr. Vijay!</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">P</div>
+            <div>
+              <div class="author-name">Priya M.</div>
+              <div class="author-tag">Implant Patient</div>
+            </div>
+            <div class="author-verified">Verified</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">"</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-text">Consulted Dr. Vijay for scaling and got all my doubts answered patiently. He provided valid, practical suggestions and the procedure was very comfortable. Highly recommend this clinic!</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">A</div>
+            <div>
+              <div class="author-name">Ajay K.</div>
+              <div class="author-tag">Teeth Cleaning Patient</div>
+            </div>
+            <div class="author-verified">Verified</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">"</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-text">I was terrified of root canals, but Dr. Vijay made the whole process so comfortable I barely felt anything. The clinic is spotlessly clean and modern. I won't go anywhere else for dental care.</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">S</div>
+            <div>
+              <div class="author-name">Sunita R.</div>
+              <div class="author-tag">Root Canal Patient</div>
+            </div>
+            <div class="author-verified">Verified</div>
+          </div>
+        </div>
+        <div class="testimonial-card">
+          <div class="testimonial-quote-icon">"</div>
+          <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
+          <div class="testimonial-text">Got my smile makeover done here and the results are beyond what I imagined. My veneers look completely natural and Dr. Vijay took the time to understand exactly what I wanted. Incredible work!</div>
+          <div class="testimonial-author">
+            <div class="testimonial-avatar">N</div>
+            <div>
+              <div class="author-name">Neha T.</div>
+              <div class="author-tag">Smile Makeover Patient</div>
+            </div>
+            <div class="author-verified">Verified</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="testimonials-summary reveal">
+      <div class="summary-rating">
+        <div class="summary-num">4.9</div>
+        <div class="summary-stars">⭐⭐⭐⭐⭐</div>
+        <div class="summary-count">409 Reviews</div>
+      </div>
+      <div class="summary-sep"></div>
+      <div class="summary-text">
+        "Consistently ranked as one of Vanasthalipuram's top-rated dental clinics — trusted by over 400 patients who wouldn't go anywhere else."
+      </div>
+      <a href="https://maps.google.com" target="_blank" class="btn-outline" style="margin-left:auto; border-color:rgba(255,255,255,0.2); color:rgba(255,255,255,0.6); flex-shrink:0;">
+        Read All Reviews
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== CTA STRIP ==================== -->
+<section id="cta-strip">
+  <div class="cta-strip-bg"></div>
+  <div class="container">
+    <div class="cta-strip-inner">
+      <div class="cta-strip-text">
+        <div class="overline">Don't Wait for the Pain</div>
+        <div class="cta-strip-title">Your Perfect Smile is<br>One Appointment Away</div>
+      </div>
+      <div class="cta-strip-actions">
+        <a href="#appointment" class="btn-white">
+          <span>Book Online</span>
+        </a>
+        <a href="tel:+918465923623" class="btn-outline-white">
+          <span>📞 Call 084659 23623</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== APPOINTMENT ==================== -->
+<section id="appointment">
+  <div class="container">
+    <div class="appt-grid">
+      <div class="reveal">
+        <div class="appt-form-wrap">
+          <div class="form-title">Book Your Visit</div>
+          <div class="form-subtitle">Fill in your details and we'll confirm your appointment within a few hours. Alternatively, call or WhatsApp us directly.</div>
+          <div id="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label>First Name</label>
+                <input type="text" placeholder="Your first name" id="f-fname">
+              </div>
+              <div class="form-group">
+                <label>Last Name</label>
+                <input type="text" placeholder="Your last name" id="f-lname">
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Phone Number</label>
+              <input type="tel" placeholder="+91 XXXXX XXXXX" id="f-phone">
+            </div>
+            <div class="form-group">
+              <label>Email Address (Optional)</label>
+              <input type="email" placeholder="your@email.com" id="f-email">
+            </div>
+            <div class="form-group">
+              <label>Treatment Required</label>
+              <select id="f-service">
+                <option value="">Select a service...</option>
+                <option>Dental Implants</option>
+                <option>Teeth Whitening / Smile Makeover</option>
+                <option>Root Canal Treatment</option>
+                <option>Crowns & Veneers</option>
+                <option>Laser Dentistry</option>
+                <option>Teeth Cleaning / Scaling</option>
+                <option>Oral Surgery / Extractions</option>
+                <option>Dentures & Bridges</option>
+                <option>Emergency Care</option>
+                <option>General Check-Up</option>
+                <option>Other / Not Sure</option>
+              </select>
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Preferred Date</label>
+                <input type="date" id="f-date">
+              </div>
+              <div class="form-group">
+                <label>Preferred Time</label>
+                <select id="f-time">
+                  <option value="">Select time...</option>
+                  <option>10:00 AM</option>
+                  <option>11:00 AM</option>
+                  <option>12:00 PM</option>
+                  <option>01:00 PM</option>
+                  <option>02:00 PM</option>
+                  <option>03:00 PM</option>
+                  <option>04:00 PM</option>
+                  <option>05:00 PM</option>
+                  <option>06:00 PM</option>
+                  <option>07:00 PM</option>
+                </select>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Additional Notes</label>
+              <textarea placeholder="Any symptoms, concerns, or questions you'd like to mention..." id="f-notes"></textarea>
+            </div>
+            <p class="form-note">By submitting, you agree to be contacted by our team to confirm your appointment. Your information is kept strictly confidential.</p>
+            <button class="btn-primary form-submit" onclick="submitForm()"><span>Confirm Appointment Request</span></button>
+          </div>
+          <div class="form-success" id="form-success">
+            <div style="font-size:3rem; margin-bottom:1rem;">✅</div>
+            <div style="font-family:var(--ff-head); font-size:1.5rem; color:var(--navy); margin-bottom:0.5rem;">Request Received!</div>
+            <div style="font-size:0.88rem; color:var(--text-mid); line-height:1.7;">Thank you! Our team will contact you shortly to confirm your appointment with Dr. Vijay Kumar. For immediate assistance, please call <strong>084659 23623</strong>.</div>
+          </div>
+        </div>
+      </div>
+      <div class="appt-info reveal reveal-delay-2">
+        <div class="tag">Reach Us</div>
+        <h2 class="appt-info-title">Get in Touch<br>With Our Team</h2>
+        <p class="appt-info-desc">Our friendly staff are ready to assist you. Whether you prefer to call, WhatsApp, or visit in person — we are here for you.</p>
+        <div class="contact-items">
+          <div class="contact-item">
+            <div class="contact-icon">📞</div>
+            <div>
+              <div class="contact-label">Phone & WhatsApp</div>
+              <div class="contact-value"><a href="tel:+918465923623">084659 23623</a></div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div>
+              <div class="contact-label">Address</div>
+              <div class="contact-value">LAXMI GAYATHRI TOWERS, Beside SBI Bank,<br>Opp. Vanasthalipuram Police Station,<br>Vanasthalipuram, Telangana 500070</div>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">💬</div>
+            <div>
+              <div class="contact-label">WhatsApp</div>
+              <div class="contact-value"><a href="https://wa.me/918465923623" target="_blank">Message us on WhatsApp →</a></div>
+            </div>
+          </div>
+        </div>
+        <div class="hours-grid">
+          <div class="hour-row">
+            <span class="hour-day">Monday – Saturday</span>
+            <span class="hour-time">10:00 AM – 8:00 PM</span>
+          </div>
+          <div class="hour-row">
+            <span class="hour-day">Sunday</span>
+            <span class="hour-time">10:00 AM – 2:00 PM</span>
+          </div>
+          <div class="hour-row">
+            <span class="hour-day">Emergency</span>
+            <span class="hour-time">Call Anytime</span>
+          </div>
+          <div class="hour-row">
+            <span class="hour-day">Online Booking</span>
+            <span class="hour-time">24 / 7</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FAQ ==================== -->
+<section id="faq">
+  <div class="container">
+    <div class="faq-grid">
+      <div class="reveal">
+        <div class="tag">Common Questions</div>
+        <h2 class="section-title">Questions We<br>Hear <em>Every Day</em></h2>
+        <div class="divider"></div>
+        <p class="section-subtitle">Can't find your answer here? Call us on <strong style="color:var(--gold)">084659 23623</strong> or send a WhatsApp message and we'll respond promptly.</p>
+        <a href="https://wa.me/918465923623" target="_blank" class="btn-primary" style="margin-top:2rem;"><span>Ask on WhatsApp</span></a>
+      </div>
+      <div class="faq-list reveal reveal-delay-2" id="faq-list">
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Are dental implants painful?
+            <em class="faq-toggle">+</em>
+          </button>
+          <div class="faq-answer">Dental implants at Life Kare are performed under local anaesthesia, so you feel no pain during the procedure. Most patients describe only mild discomfort for a day or two afterwards, which is easily managed with standard pain relief. Dr. Vijay's patients consistently praise how comfortable the process is.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How long does a teeth whitening session take?
+            <em class="faq-toggle">+</em>
+          </button>
+          <div class="faq-answer">Our professional in-clinic whitening session typically takes 45–60 minutes and can brighten your teeth by 4–8 shades. Results are immediate and significantly more effective and safer than over-the-counter products.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Is root canal treatment painful?
+            <em class="faq-toggle">+</em>
+          </button>
+          <div class="faq-answer">The short answer: no. Modern RCT is performed under effective anaesthesia and is typically no more uncomfortable than having a filling. Most patients are genuinely surprised by how straightforward the procedure is. Dr. Vijay's gentle technique makes it even more comfortable.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How do I book an emergency appointment?
+            <em class="faq-toggle">+</em>
+          </button>
+          <div class="faq-answer">For dental emergencies, please call us directly on 084659 23623 or WhatsApp us. We do our best to accommodate emergency patients on the same day. Don't suffer in pain — reach out immediately and our team will guide you.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            How often should I visit the dentist?
+            <em class="faq-toggle">+</em>
+          </button>
+          <div class="faq-answer">We recommend a check-up and professional cleaning every 6 months for most patients. This helps catch small issues before they become costly problems and keeps your teeth and gums in optimal health. Dr. Vijay will advise on the best schedule for your specific situation.</div>
+        </div>
+        <div class="faq-item">
+          <button class="faq-question" onclick="toggleFaq(this)">
+            Do you offer payment options or installments?
+            <em class="faq-toggle">+</em>
+          </button>
+          <div class="faq-answer">We believe financial constraints should never prevent good dental care. Please speak with our front desk team about flexible payment arrangements for larger treatments. We'll do our best to find a plan that works for you.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== LOCATION ==================== -->
+<section id="location">
+  <div class="container">
+    <div class="reveal" style="text-align:center; margin-bottom:4rem;">
+      <div class="tag">Find Us</div>
+      <h2 class="section-title">Conveniently Located in<br><em>Vanasthalipuram</em></h2>
+    </div>
+    <div class="location-grid">
+      <div class="map-container reveal">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3807.5!2d78.558!3d17.363!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLife%20Kare%20Dental%20Hospital%20Vanasthalipuram!5e0!3m2!1sen!2sin!4v1"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+      <div class="location-info reveal reveal-delay-2">
+        <div class="location-address-card">
+          <div class="address-title">Our Address</div>
+          <div class="address-text">
+            LAXMI GAYATHRI TOWERS<br>
+            Beside SBI Bank,<br>
+            Opposite Vanasthalipuram Police Station<br>
+            Vanasthalipuram, Telangana 500070
+          </div>
+          <div class="nearby-landmarks" style="margin-top:1.2rem;">
+            <div class="landmark">Beside SBI Bank Branch</div>
+            <div class="landmark">Opposite Vanasthalipuram Police Station</div>
+            <div class="landmark">Approx. 1.1 km from major landmark</div>
+          </div>
+        </div>
+        <p style="font-size:0.88rem; color:var(--text-mid); line-height:1.8; margin-bottom:1.5rem;">
+          We are easily accessible by auto-rickshaw, cab, or private vehicle. Parking is available in the vicinity. Our clinic is a well-known landmark in the area — simply ask for Life Kare Dental near the Police Station.
+        </p>
+        <div class="direction-btns">
+          <a href="https://maps.google.com/maps?q=Life+Kare+Dental+Hospital+Vanasthalipuram" target="_blank" class="direction-btn primary">
+            🗺️ Get Directions
+          </a>
+          <a href="https://wa.me/918465923623" target="_blank" class="direction-btn secondary">
+            💬 Ask on WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ==================== FOOTER ==================== -->
+<footer id="footer">
+  <div class="container">
+    <div class="footer-top">
+      <div>
+        <a href="#" class="nav-logo" style="color:var(--white); display:inline-flex; margin-bottom:0;">
+          <div class="nav-logo-icon">🦷</div>
+          <div class="nav-logo-text">
+            <div class="nav-logo-name">Life Kare Dental</div>
+            <div class="nav-logo-sub">Hospital · Vanasthalipuram</div>
+          </div>
+        </a>
+        <p class="footer-brand-desc">Providing trusted, advanced, and compassionate dental care to families in Vanasthalipuram and across Hyderabad since our founding — rated 4.9★ by over 400 patients.</p>
+        <div class="footer-socials">
+          <a href="https://wa.me/918465923623" class="footer-social" title="WhatsApp">💬</a>
+          <a href="#" class="footer-social" title="Google Maps">📍</a>
+          <a href="#" class="footer-social" title="Facebook">f</a>
+          <a href="#" class="footer-social" title="Instagram">📸</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Services</div>
+        <ul class="footer-links">
+          <li><a href="#services">Dental Implants</a></li>
+          <li><a href="#services">Smile Makeover</a></li>
+          <li><a href="#services">Laser Dentistry</a></li>
+          <li><a href="#services">Root Canal</a></li>
+          <li><a href="#services">Teeth Whitening</a></li>
+          <li><a href="#services">Crowns & Veneers</a></li>
+          <li><a href="#services">Emergency Care</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Quick Links</div>
+        <ul class="footer-links">
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#doctor">Dr. Vijay Kumar</a></li>
+          <li><a href="#testimonials">Patient Reviews</a></li>
+          <li><a href="#faq">FAQs</a></li>
+          <li><a href="#appointment">Book Appointment</a></li>
+          <li><a href="#location">Location & Hours</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Contact</div>
+        <ul class="footer-links" style="gap:1rem;">
+          <li style="display:flex; flex-direction:column; gap:4px;"><span style="font-size:0.72rem; color:rgba(255,255,255,0.3); letter-spacing:0.08em; text-transform:uppercase;">Phone</span><a href="tel:+918465923623" style="color:var(--gold-lt);">084659 23623</a></li>
+          <li style="display:flex; flex-direction:column; gap:4px;"><span style="font-size:0.72rem; color:rgba(255,255,255,0.3); letter-spacing:0.08em; text-transform:uppercase;">Hours</span><span style="font-size:0.82rem; color:rgba(255,255,255,0.45);">Mon–Sat: 10am–8pm<br>Sun: 10am–2pm</span></li>
+          <li style="display:flex; flex-direction:column; gap:4px;"><span style="font-size:0.72rem; color:rgba(255,255,255,0.3); letter-spacing:0.08em; text-transform:uppercase;">Address</span><span style="font-size:0.82rem; color:rgba(255,255,255,0.45);">LAXMI GAYATHRI TOWERS,<br>Vanasthalipuram, Hyderabad 500070</span></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>© 2025 Life Kare Dental Hospital. All rights reserved.</div>
+      <div style="display:flex; gap:1.5rem;">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Service</a>
+        <a href="#">Sitemap</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ==================== STICKY BUTTONS ==================== -->
+<div class="sticky-call">
+  <a href="https://wa.me/918465923623" class="sticky-btn whatsapp" title="WhatsApp Us" target="_blank">
+    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span>WhatsApp</span>
+  </a>
+  <a href="tel:+918465923623" class="sticky-btn call" title="Call Us">
+    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+    <span>Call Now</span>
+  </a>
+</div>
+
+<!-- ==================== JAVASCRIPT ==================== -->
+<script>
+  // Navbar scroll effect
+  const navbar = document.getElementById('navbar');
+  window.addEventListener('scroll', () => {
+    navbar.classList.toggle('scrolled', window.scrollY > 60);
+  });
+
+  // Mobile menu
+  function toggleMenu() {
+    document.getElementById('mobile-menu').classList.toggle('open');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+  reveals.forEach(el => observer.observe(el));
+
+  // Testimonials slider
+  let currentSlide = 0;
+  const track = document.getElementById('testimonials-track');
+  function slideTestimonials(dir) {
+    const cards = track.querySelectorAll('.testimonial-card');
+    const totalSlides = cards.length;
+    const visibleCards = window.innerWidth > 1024 ? 3 : window.innerWidth > 768 ? 2 : 1;
+    const maxSlide = totalSlides - visibleCards;
+    currentSlide = Math.max(0, Math.min(currentSlide + dir, maxSlide));
+    const cardWidth = cards[0].offsetWidth + 24; // 24 = gap
+    track.style.transform = `translateX(-${currentSlide * cardWidth}px)`;
+  }
+
+  // FAQ accordion
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  }
+
+  // Booking form
+  function submitForm() {
+    const fname = document.getElementById('f-fname').value.trim();
+    const phone = document.getElementById('f-phone').value.trim();
+    if (!fname || !phone) {
+      alert('Please enter your name and phone number to continue.');
+      return;
+    }
+    document.getElementById('booking-form').style.display = 'none';
+    document.getElementById('form-success').classList.add('show');
+  }
+
+  // Set min date for date input
+  const dateInput = document.getElementById('f-date');
+  if (dateInput) {
+    const today = new Date().toISOString().split('T')[0];
+    dateInput.setAttribute('min', today);
+  }
+</script>
+</body>
+</html>
